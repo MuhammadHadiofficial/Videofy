@@ -2,6 +2,7 @@
 import CreateFolder from '@/components/ui/global/create-folders'
 import CreateWorkSpace from '@/components/ui/global/create-workspace'
 import Folders from '@/components/ui/global/folders'
+import Videos from '@/components/ui/global/videos'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { TabsContent } from '@radix-ui/react-tabs'
 import { useParams } from 'next/navigation'
@@ -32,6 +33,7 @@ const WorkSpace = (props: Props) => {
 <section className='py-3'>
 <TabsContent value='videos'>
   <Folders workspaceid={params?.workspaceid}/>
+  <Videos workspaceId={params?.workspaceid}     videosKey={"user-videos"} />
   </TabsContent>
 </section>
       </Tabs>
